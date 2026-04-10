@@ -1,0 +1,18 @@
+class Solution:
+    def minEnd(self, n: int, x: int) -> int:
+        res = x
+        i_n = 1
+        i_x = 1
+        while i_n<n:
+            print('i_x', bin(i_x), bin(x))
+            print('i_n',bin(i_n),bin(n-1))
+            if i_x & x == 0:
+                
+                
+                if i_n & n-1:
+                    
+                    res = res | i_x
+                    print(bin(res))
+                i_n = i_n<<1
+            i_x = i_x<<1
+        return res
